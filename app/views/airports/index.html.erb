@@ -1,31 +1,3 @@
-<h1>Listing airports</h1>
+<div id="map"></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Geometry</th>
-      <th>Properties</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @airports.each do |airport| %>
-      <tr>
-        <td><%= airport.type %></td>
-        <td><%= airport.geometry %></td>
-        <td><%= airport.properties %></td>
-        <td><%= link_to 'Show', airport %></td>
-        <td><%= link_to 'Edit', edit_airport_path(airport) %></td>
-        <td><%= link_to 'Destroy', airport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Airport', new_airport_path %>
+<%= javascript_include_tag "airports", "data-turbolinks-track" => true %>
