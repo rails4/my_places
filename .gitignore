@@ -5,3 +5,5 @@ db/*.sqlite3
 tmp/*/**
 airports.csv
 lotniska.geojson
+.bundle
+.bundle/config
